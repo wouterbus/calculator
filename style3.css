@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+
+:root {
+    /* Theme 1 */ 
+    /* Backgrounds */
+    --two-main-bg : hsl(268, 75%, 9%);
+    --two-keypad-bg: hsl(268, 71%, 12%);
+    --two-screen-bg: hsl(224, 36%, 15%);
+
+    /* Keys */   
+    --two-btn-reset: hsl(281, 89%, 26%);
+    --two-reset-shadow: hsl(285, 91%, 52%);
+
+    --two-btn-equals: hsl(176, 100%, 44%);
+    --two-equals-shadow: hsl(177, 92%, 70%);
+
+    --two-btn-all: hsl(268, 47%, 21%);
+    --two-all-shadow: hsl(28, 16%, 65%);
+
+    /* Keys */  
+    --two-text-dark: hsl(52, 100%, 62%);
+    --two-text-light: hsl(290, 70%, 36%);
+    --two-text-yellow: hsl(52, 100%, 62%);
+    --two-text-black: hsl(60, 10%, 19%);
+    --two-text-white: hsl(0, 0%, 100%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background-color: var(--two-main-bg);
+    font-family: "League Spartan", sans-serif;
+}
+
+h1 {
+    color: var(--two-text-yellow);
+}
+
+a {
+    height: 20px;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.btn-container {
+    background-color: var(--two-keypad-bg);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 5px;
+    border-radius: 30px ;
+    position: relative;
+}
+
+.btn-container:before {
+    content: 'THEME';
+    color: var(--two-text-yellow);
+    position: absolute;
+    left: -64px!important;
+    letter-spacing: 0.5px;
+}
+
+.btn-container:after {
+    content: '123';
+    position: absolute;
+    color: yellow;
+    left: 0;
+    text-align: center;
+    letter-spacing: 25px;
+    margin: 0 10px;
+    top: -25px;
+}
+
+.btn-container button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.style3Button {
+    background-color: var(--two-btn-equals);
+}
+
+.style2Button {
+    background-color: transparent;
+}
+
+.style1Button {
+    background-color: transparent;
+}
+
+
+
+/* End */
+
+.output-screen {
+    background-color: var(--two-keypad-bg);
+    font-size: 48px;
+    height: 130px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--two-text-yellow);
+}
+
+.buttons {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 100px);
+    gap: 30px;
+    max-width:540px;
+    background-color: var(--two-keypad-bg);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.buttons > button {
+    font-family: "League Spartan", sans-serif;
+    cursor: pointer;
+    height: 60px;
+    background-color: var(--two-btn-all);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    box-shadow: 0 4px var(--two-text-light);
+    color: var(--two-text-yellow);
+    font-size: 40px;
+    line-height: 68px;
+}
+
+.buttons > button:hover {
+    background-color: var(--two-text-light);
+}
+
+.buttons .btn-green {
+    background-color: var(--two-btn-reset);
+    box-shadow: 0 4px var(--two-reset-shadow);
+    color: var(--two-text-white);
+    font-size: 30px;
+}
+
+.buttons button.btn-green:hover {
+    background-color: var(--two-btn-reset);
+    color: var(--two-text-white);
+    filter: brightness(1.4);
+}
+
+.buttons button.btn-orange:hover {
+    background-color: var(--two-btn-equals);
+    filter: brightness(1.4);
+}
+
+.buttons .btn-orange {
+    background-color: var(--two-btn-equals);
+    box-shadow: 0 4px var(--two-equals-shadow);
+    color: var(--two-text-black);
+    font-size: 30px;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+input {
+    font-family: inherit;
+    text-align: right;
+    width: 100%;
+    display: flex;
+    border: none;
+    padding: 40px;
+    max-width: 540px;
+    outline: none;
+    cursor:auto;
+}
+
+@media(max-width:600px) {
+    .app-container {
+    margin: 25px;
+    max-width: 100%;
+}
+
+.buttons > button {
+    max-width: none;
+    font-size: 28px;
+    width: auto;
+}
+
+.buttons {
+    gap: 10px;
+    max-width: none;
+    grid-template-columns: repeat(4, 25%);
+}
+}

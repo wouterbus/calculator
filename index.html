@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style1.css">
+  <script defer src="script.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+</head>
+<body>
+  <div class="app-container">
+    <div class="header">
+        <h1>Calc</h1>
+        <div class="btn-container">
+          <a href="index.html"><button class="style1Button" id="style1Button switcher"></button></a>
+          <a href="index2.html"><button class="style2Button" id="style2Button switcher"></button></a>
+          <a href="index3.html"><button class="style3Button" id="style3Button switcher"></button></a>
+        </div>
+    </div>
+    <input class="output-screen" id="display" readonly>
+
+    <div class="buttons">
+      <button onclick="appendToDisplay('7')">7</button>
+      <button onclick="appendToDisplay('8')">8</button>
+      <button onclick="appendToDisplay('9')">9</button>
+      <button onclick="clearOne()" class="btn-green">DEL</button>
+      <button onclick="appendToDisplay('4')">4</button>
+      <button onclick="appendToDisplay('5')">5</button>
+      <button onclick="appendToDisplay('6')">6</button>
+      <button onclick="appendToDisplay('+')">+</button>
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <button onclick="appendToDisplay('3')">3</button>
+      <button onclick="appendToDisplay('-')">-</button>
+      <button onclick="appendToDisplay('.')">.</button>
+      <button onclick="appendToDisplay('0')">0</button>
+      <button onclick="appendToDisplay('/')">/</button>
+      <button onclick="appendToDisplay('*')">x</button>
+      <button onclick="clearDisplay()" class="span-two btn-green">RESET</button>
+      <button onclick="calculate()" class="span-two btn-orange">=</button>
+    </div>
+  </div>
+
+</body>
+</html>
